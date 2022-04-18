@@ -15,7 +15,7 @@
 
 #ifndef STDTIVA_H
 #define STDTIVA_H
-#include "C:\Keil\Labware\inc\tm4c123gh6pm.h"
+#include "tm4c123gh6pm.h"
 #include <stdint.h>
 
 // pins enum as their numbers defined in the datasheet of TM4C123GH6PM
@@ -64,4 +64,10 @@ typedef enum pin {
 	PF3 = 31,
 	PF4 = 5
 } Pin;
+
+//***********************************************************//
+// FUNCTIONS HANDLERS
+//***********************************************************//
+void PORTF_Init(void);
+
 #endif //STDTIVA_H
