@@ -20,3 +20,9 @@ void SysTick_delay(uint32_t delay) {
 	for (i = 0; i < delay; i++)
 		SysTick_Wait(80000);
 }
+
+void SysTick_delayus(uint32_t delayus) {
+	unsigned long i;
+	for (i = 0; i < delayus; i++)
+		SysTick_Wait(80);
+}

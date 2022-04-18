@@ -79,8 +79,9 @@ void PORTF_Output(uint32_t data);
 //***********************************************************//
 // SYSTICK FUNCTIONS
 //***********************************************************//
-void SysTick_Init(void);
-void SysTick_Wait(uint32_t delay);
-void SysTick_delay(uint32_t delay);
+void SysTick_Init(void);								// must be called before using SysTick functions
+void SysTick_Wait(uint32_t delay);			// to wait a certain delay calculated by the system timer
+void SysTick_delay(uint32_t delay);			// to wait a certain delay in ms
+void SysTick_delayus(uint32_t delayus); // to wait a certain delay in us
 
 #endif //STDTIVA_H
