@@ -1,6 +1,6 @@
 #include "stdtiva.h"
 
-void digitalEnable(Pin pin, PORT port) {
+uint32_t digitalEnable(Pin pin, PORT port) {
 	unsigned long mask = 0;
 	switch (port)
 	{
@@ -18,45 +18,41 @@ void digitalEnable(Pin pin, PORT port) {
 			
 			break;
 	}
+	return mask;
 }
 
 void digitalWrite(Pin pin, digital I_O) {
 	switch (pin) {
 		case PF0:
-			GPIO_PORTF_DIR_R |= 1;
-			digitalEnable(PF0, PORTF);
-			if (I_O)
+			GPIO_PORTF_DIR_R |= digitalEnable(PF0, PORTF);
+			if (I_O == HIGH)
 				GPIO_PORTF_DATA_R |= 1;
 			else
 				GPIO_PORTF_DATA_R &= ~1;
 			break;
 		case PF1:
-			GPIO_PORTF_DIR_R |= (1<<1);
-			digitalEnable(PF1, PORTF);
-			if (I_O)
+			GPIO_PORTF_DIR_R |= digitalEnable(PF1, PORTF);
+			if (I_O == HIGH)
 				GPIO_PORTF_DATA_R |= (1<<1);
 			else
 				GPIO_PORTF_DATA_R &= ~(1<<1);
 			break;
 		case PF2:
-			GPIO_PORTF_DIR_R |= (1<<2);
-			digitalEnable(PF2, PORTF);
-			if (I_O)
+			GPIO_PORTF_DIR_R |= digitalEnable(PF2, PORTF);
+			if (I_O == HIGH)
 				GPIO_PORTF_DATA_R |= (1<<2);
 			else
 				GPIO_PORTF_DATA_R &= ~(1<<2);
 			break;
 		case PF3:
-			GPIO_PORTF_DIR_R |= (1<<3);
-			digitalEnable(PF3, PORTF);
-			if (I_O)
+			GPIO_PORTF_DIR_R |= digitalEnable(PF3, PORTF);
+			if (I_O == HIGH)
 				GPIO_PORTF_DATA_R |= (1<<3);
 			else
 				GPIO_PORTF_DATA_R &= ~(1<<3);
 			break;
 		case PF4:
-			GPIO_PORTF_DIR_R |= (1<<4);
-			digitalEnable(PF4, PORTF);
+			GPIO_PORTF_DIR_R |= digitalEnable(PF4, PORTF);
 			if (I_O)
 				GPIO_PORTF_DATA_R |= (1<<4);
 			else

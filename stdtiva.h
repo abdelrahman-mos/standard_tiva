@@ -98,7 +98,7 @@ void SysTick_delayus(uint32_t delayus); // to wait a certain delay in us
 // STANDARD FUNCTIONS
 // these are the main purpose of this file
 //***********************************************************//
-void digitalEnable(Pin pin, PORT port);
+uint32_t digitalEnable(Pin pin, PORT port);
 void digitalWrite(Pin pin, digital I_O);
 
 #endif //STDTIVA_H
