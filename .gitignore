@@ -1,0 +1,4 @@
+*.uvproj
+startup_TM4C123.s
+system_TM4C123.c
+stdtiva.build_log.htm
