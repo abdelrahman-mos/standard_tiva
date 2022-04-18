@@ -19,7 +19,7 @@
 #include <stdint.h>
 
 // pins enum as their numbers defined in the datasheet of TM4C123GH6PM
-typedef enum pin {
+typedef enum {
 	PA0 = 17,
 	PA1 = 18,
 	PA2 = 19,
@@ -65,6 +65,17 @@ typedef enum pin {
 	PF4 = 5
 } Pin;
 
+typedef enum {
+	PORTA,
+	PORTB,
+	PORTC,
+	PORTD,
+	PORTE,
+	PORTF
+} PORT;
+
+typedef enum { LOW = 0, HIGH = 1} digital;
+
 
 //***********************************************************//
 // FUNCTIONS HANDLERS
@@ -73,15 +84,21 @@ typedef enum pin {
 // PORT F FUNCTIONS
 //***********************************************************//
 void PORTF_Init(void);
-uint32_t PORTF_Input(void);
-void PORTF_Output(uint32_t data);
+uint32_t PORTF_Input(void);		// reads input from input pins in port F
+void PORTF_Output(uint32_t data);  // writes output to output pins in port F
 
 //***********************************************************//
 // SYSTICK FUNCTIONS
 //***********************************************************//
 void SysTick_Init(void);								// must be called before using SysTick functions
 void SysTick_Wait(uint32_t delay);			// to wait a certain delay calculated by the system timer
-void SysTick_delay(uint32_t delay);			// to wait a certain delay in ms
+void SysTick_delay(uint32_t delayms);		// to wait a certain delay in ms
 void SysTick_delayus(uint32_t delayus); // to wait a certain delay in us
+//***********************************************************//
+// STANDARD FUNCTIONS
+// these are the main purpose of this file
+//***********************************************************//
+void digitalEnable(Pin pin, PORT port);
+void digitalWrite(Pin pin, digital I_O);
 
 #endif //STDTIVA_H
