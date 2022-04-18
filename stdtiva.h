@@ -65,6 +65,7 @@ typedef enum pin {
 	PF4 = 5
 } Pin;
 
+
 //***********************************************************//
 // FUNCTIONS HANDLERS
 //***********************************************************//
@@ -74,5 +75,12 @@ typedef enum pin {
 void PORTF_Init(void);
 uint32_t PORTF_Input(void);
 void PORTF_Output(uint32_t data);
+
+//***********************************************************//
+// SYSTICK FUNCTIONS
+//***********************************************************//
+void SysTick_Init(void);
+void SysTick_Wait(uint32_t delay);
+void SysTick_delay(uint32_t delay);
 
 #endif //STDTIVA_H
