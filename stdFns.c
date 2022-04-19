@@ -27,6 +27,68 @@ void digitalEnable(Pin pin, PORT port) {
 	unsigned long mask = 0;
 	switch (port)
 	{
+		case PORTA:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			switch (pin) {
+				case PA0: mask = 1;      break;
+				case PA1: mask = (1<<1); break;
+				case PA2: mask = (1<<2); break;
+				case PA3: mask = (1<<3); break;
+				case PA4: mask = (1<<4); break;
+				case PA5: mask = (1<<5); break;
+				case PA6: mask = (1<<6); break;
+				case PA7: mask = (1<<7); break;
+			}
+			GPIO_PORTA_DEN_R |= mask;
+			
+			break;
+			case PORTB:
+			if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+				PORTB_Init();
+			switch (pin) {
+				case PB0: mask = 1;      break;
+				case PB1: mask = (1<<1); break;
+				case PB2: mask = (1<<2); break;
+				case PB3: mask = (1<<3); break;
+				case PB4: mask = (1<<4); break;
+				case PB5: mask = (1<<5); break;
+				case PB6: mask = (1<<6); break;
+				case PB7: mask = (1<<7); break;
+			}
+			GPIO_PORTB_DEN_R |= mask;
+			
+			break;
+			case PORTD:
+			if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+				PORTD_Init();
+			switch (pin) {
+				case PD0: mask = 1;      break;
+				case PD1: mask = (1<<1); break;
+				case PD2: mask = (1<<2); break;
+				case PD3: mask = (1<<3); break;
+				case PD4: mask = (1<<4); break;
+				case PD5: mask = (1<<5); break;
+				case PD6: mask = (1<<6); break;
+				case PD7: mask = (1<<7); break;
+			}
+			GPIO_PORTD_DEN_R |= mask;
+			
+			break;
+			case PORTE:
+			if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+				PORTE_Init();
+			switch (pin) {
+				case PE0: mask = 1;      break;
+				case PE1: mask = (1<<1); break;
+				case PE2: mask = (1<<2); break;
+				case PE3: mask = (1<<3); break;
+				case PE4: mask = (1<<4); break;
+				case PE5: mask = (1<<5); break;
+			}
+			GPIO_PORTE_DEN_R |= mask;
+			
+			break;
 		case PORTF:
 			if ((SYSCTL_PRGPIO_R & 0x00000020)==0)
 				PORTF_Init();
