@@ -29,6 +29,7 @@ void pinMode(Pin pin, Direction dir) {
 				GPIO_PORTF_DIR_R |= 1;
 			else
 				GPIO_PORTF_DIR_R &= ~1;
+			break;
 		case PF1:
 			if ((SYSCTL_PRGPIO_R & 0x00000020)==0)
 				PORTF_Init();
@@ -36,6 +37,7 @@ void pinMode(Pin pin, Direction dir) {
 				GPIO_PORTF_DIR_R |= (1<<1);
 			else
 				GPIO_PORTF_DIR_R &= ~(1<<1);
+			break;
 		case PF2:
 			if ((SYSCTL_PRGPIO_R & 0x00000020)==0)
 				PORTF_Init();
@@ -43,6 +45,7 @@ void pinMode(Pin pin, Direction dir) {
 				GPIO_PORTF_DIR_R |= (1<<2);
 			else
 				GPIO_PORTF_DIR_R &= ~(1<<2);
+			break;
 		case PF3:
 			if ((SYSCTL_PRGPIO_R & 0x00000020)==0)
 				PORTF_Init();
@@ -50,6 +53,7 @@ void pinMode(Pin pin, Direction dir) {
 				GPIO_PORTF_DIR_R |= (1<<3);
 			else
 				GPIO_PORTF_DIR_R &= ~(1<<3);
+			break;
 		case PF4:
 			if ((SYSCTL_PRGPIO_R & 0x00000020)==0)
 				PORTF_Init();
@@ -57,6 +61,7 @@ void pinMode(Pin pin, Direction dir) {
 				GPIO_PORTF_DIR_R |= (1<<4);
 			else
 				GPIO_PORTF_DIR_R &= ~(1<<4);
+			break;
 	}
 }
 
@@ -88,7 +93,7 @@ void digitalWrite(Pin pin, Digital I_O) {
 			if (I_O == HIGH)
 				GPIO_PORTF_DATA_R |= (0x00000001<<3);
 			else
-				GPIO_PORTF_DATA_R &= ~(0x08);
+				GPIO_PORTF_DATA_R &= ~(0x00000001<<3);
 			break;
 		case PF4:
 			digitalEnable(PF4, PORTF);

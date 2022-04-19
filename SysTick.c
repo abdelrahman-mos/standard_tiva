@@ -20,11 +20,11 @@ void SysTick_Wait(uint32_t delay) {
 void SysTick_delay(uint32_t delay) {
 	unsigned long i;
 	for (i = 0; i < delay; i++)
-		SysTick_Wait(80000);
+		SysTick_Wait(8000);
 }
 
 void SysTick_delayus(uint32_t delayus) {
 	unsigned long i;
 	for (i = 0; i < delayus; i++)
-		SysTick_Wait(80);
+		SysTick_Wait(8);
 }
