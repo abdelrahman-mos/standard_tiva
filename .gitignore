@@ -13,5 +13,6 @@ main.c
 *.dep
 *.axf
 *.iex
-*.py
-*.cpp
+*.bak
+*.future
+*.uvopt
