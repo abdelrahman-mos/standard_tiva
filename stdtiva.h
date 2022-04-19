@@ -74,7 +74,9 @@ typedef enum {
 	PORTF
 } PORT;
 
-typedef enum { LOW = 0, HIGH = 1} digital;
+typedef enum { LOW = 0, HIGH = 1 } Digital;
+
+typedef enum { INPUT, OUTPUT } Direction;
 
 
 //***********************************************************//
@@ -98,7 +100,8 @@ void SysTick_delayus(uint32_t delayus); // to wait a certain delay in us
 // STANDARD FUNCTIONS
 // these are the main purpose of this file
 //***********************************************************//
-uint32_t digitalEnable(Pin pin, PORT port);
-void digitalWrite(Pin pin, digital I_O);
+void pinMode(Pin pin, Direction dir);
+void digitalEnable(Pin pin, PORT port);
+void digitalWrite(Pin pin, Digital I_O);
 
 #endif //STDTIVA_H
