@@ -13,3 +13,4 @@ main.c
 *.dep
 *.axf
 *.iex
+*.py
