@@ -21,7 +21,7 @@
 //
 //***********************************************************//
 
-#include "stdtiva.h"
+#include "D:\Study\Second Semster\Introduction to Embedded Systems\Projects\STDLIB\stdtiva.h"
 
 void digitalEnable(Pin pin, PORT port) {
 	unsigned long mask = 0;
@@ -107,6 +107,246 @@ void digitalEnable(Pin pin, PORT port) {
 
 void pinMode(Pin pin, Direction dir) {
 	switch (pin) {
+		case PA0:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= 1;
+			else
+				GPIO_PORTA_DIR_R &= ~1;
+			break;
+			case PA1:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<1);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<1);
+			break;
+			case PA2:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<2);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<2);
+			break;
+			case PA3:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<3);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<3);
+			break;
+			case PA4:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<4);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<4);
+			break;
+			case PA5:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<5);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<5);
+			break;
+			case PA6:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<6);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<6);
+			break;
+			case PA7:
+			if ((SYSCTL_PRGPIO_R & 0x00000001)==0)
+				PORTA_Init();
+			if (dir == OUTPUT)
+				GPIO_PORTA_DIR_R |= (1<<7);
+			else
+				GPIO_PORTA_DIR_R &= ~(1<<7);
+			break;
+			case PB0:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= 1;
+			else
+				GPIO_PORTB_DIR_R &= ~1;
+			break;
+			case PB1:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<1);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<1);
+			break;
+			case PB2:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<2);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<2);
+			break;
+			case PB3:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<3);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<3);
+			break;
+			case PB4:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<4);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<4);
+			break;
+			case PB5:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<5);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<5);
+			break;
+			case PB6:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<6);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<6);
+			break;
+			case PB7:
+				if ((SYSCTL_PRGPIO_R & 0x00000002)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTB_DIR_R |= (1<<7);
+			else
+				GPIO_PORTB_DIR_R &= ~(1<<7);
+			break;
+			case PD0:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= 1;
+			else
+				GPIO_PORTD_DIR_R &= ~1;
+			break;
+			case PD1:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<1);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<1);
+			break;
+			case PD2:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<2);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<2);
+			break;
+			case PD3:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<3);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<3);
+			break;
+			case PD4:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<4);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<4);
+			break;
+			case PD5:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<5);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<5);
+			break;
+			case PD6:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<6);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<6);
+			break;
+			case PD7:
+				if ((SYSCTL_PRGPIO_R & 0x00000008)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTD_DIR_R |= (1<<7);
+			else
+				GPIO_PORTD_DIR_R &= ~(1<<7);
+			break;
+			case PE0:
+				if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTE_DIR_R |= 1;
+			else
+				GPIO_PORTE_DIR_R &= ~1;
+			break;
+			case PE1:
+				if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTE_DIR_R |= (1<<1);
+			else
+				GPIO_PORTE_DIR_R &= ~(1<<1);
+			break;
+			case PE2:
+				if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTE_DIR_R |= (1<<2);
+			else
+				GPIO_PORTE_DIR_R &= ~(1<<2);
+			break;
+			case PE3:
+				if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTE_DIR_R |= (1<<3);
+			else
+				GPIO_PORTE_DIR_R &= ~(1<<3);
+			break;
+			case PE4:
+				if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTE_DIR_R |= (1<<4);
+			else
+				GPIO_PORTE_DIR_R &= ~(1<<4);
+			break;
+			case PE5:
+				if ((SYSCTL_PRGPIO_R & 0x00000010)==0)
+					PORTB_Init();
+				if (dir == OUTPUT)
+				GPIO_PORTE_DIR_R |= (1<<5);
+			else
+				GPIO_PORTE_DIR_R &= ~(1<<5);
+			break;
 		case PF0:
 			if ((SYSCTL_PRGPIO_R & 0x00000020)==0)
 				PORTF_Init();
@@ -155,37 +395,37 @@ void digitalWrite(Pin pin, Digital I_O) {
 		case PF0:
 			digitalEnable(PF0, PORTF);
 			if (I_O == HIGH)
-				GPIO_PORTF_DATA_R |= 0x00000001;
+				GPIO_PORTF_DATA_R |= 1;
 			else
-				GPIO_PORTF_DATA_R &= !(0x00000001);
+				GPIO_PORTF_DATA_R &= ~1;
 			break;
 		case PF1:
 			digitalEnable(PF1, PORTF);
 			if (I_O == HIGH)
-				GPIO_PORTF_DATA_R |= (0x00000001<<1);
+				GPIO_PORTF_DATA_R |= (1<<1);
 			else
-				GPIO_PORTF_DATA_R &= !(0x00000001<<1);
+				GPIO_PORTF_DATA_R &= ~(1<<1);
 			break;
 		case PF2:
 			digitalEnable(PF2, PORTF);
 			if (I_O == HIGH)
-				GPIO_PORTF_DATA_R |= (0x00000001<<2);
+				GPIO_PORTF_DATA_R |= (1<<2);
 			else
-				GPIO_PORTF_DATA_R &= !(0x00000001<<2);
+				GPIO_PORTF_DATA_R &= ~(1<<2);
 			break;
 		case PF3:
 			digitalEnable(PF3, PORTF);
 			if (I_O == HIGH)
-				GPIO_PORTF_DATA_R |= (0x00000001<<3);
+				GPIO_PORTF_DATA_R |= (1<<3);
 			else
-				GPIO_PORTF_DATA_R &= ~(0x00000001<<3);
+				GPIO_PORTF_DATA_R &= ~(1<<3);
 			break;
 		case PF4:
 			digitalEnable(PF4, PORTF);
 			if (I_O == HIGH)
-				GPIO_PORTF_DATA_R |= (0x00000001<<4);
+				GPIO_PORTF_DATA_R |= (1<<4);
 			else
-				GPIO_PORTF_DATA_R &= !(0x00000001<<4);
+				GPIO_PORTF_DATA_R &= ~(1<<4);
 			break;
 	}
 }

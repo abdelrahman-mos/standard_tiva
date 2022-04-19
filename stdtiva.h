@@ -101,25 +101,33 @@ typedef enum { INPUT, OUTPUT } Direction;
 // PORT A FUNCTIONS
 //
 //***********************************************************//
-void PORTA_Init(void);
+void PORTA_Init(void);			   			// initializes 
+uint32_t PORTA_Input(void);		   	  // reads input from input pins in port A
+void PORTA_Output(uint32_t data);   // writes output to output pins in port A
 //***********************************************************//
 //
 // PORT B FUNCTIONS
 //
 //***********************************************************//
-void PORTB_Init(void);
+void PORTB_Init(void);			   			// initializes 
+uint32_t PORTB_Input(void);		   	  // reads input from input pins in port B
+void PORTB_Output(uint32_t data);   // writes output to output pins in port B
 //***********************************************************//
 //
 // PORT D FUNCTIONS
 //
 //***********************************************************//
-void PORTD_Init(void);
+void PORTD_Init(void);			   			// initializes 
+uint32_t PORTD_Input(void);		   	  // reads input from input pins in port D
+void PORTD_Output(uint32_t data);   // writes output to output pins in port D
 //***********************************************************//
 //
 // PORT E FUNCTIONS
 //
 //***********************************************************//
-void PORTE_Init(void);
+void PORTE_Init(void);			   			// initializes 
+uint32_t PORTE_Input(void);		   	  // reads input from input pins in port E
+void PORTE_Output(uint32_t data);   // writes output to output pins in port E
 //***********************************************************//
 //
 // PORT F FUNCTIONS
@@ -128,7 +136,6 @@ void PORTE_Init(void);
 void PORTF_Init(void);			   			// initializes 
 uint32_t PORTF_Input(void);		   	  // reads input from input pins in port F
 void PORTF_Output(uint32_t data);   // writes output to output pins in port F
-
 //***********************************************************//
 //
 // SYSTICK FUNCTIONS
