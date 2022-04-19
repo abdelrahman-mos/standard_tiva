@@ -1,16 +1,24 @@
 //***********************************************************//
-// stdtiva.h - standard functions for tiva TM4C123GH6PM
+//
+// stdtiva.h - standard functions header for tiva TM4C123GH6PM
+//
 //***********************************************************//
+//
 // this software standarizes some functions for TM4C123GH6PM 
 // tiva ware for the ease of use and learning
+//
 //***********************************************************//
+//
 // AUTHOR : Abderlahman Mostafa
 // E-mail : boboelahlawy1234@hotmail.com
 // for any questions and inquiries, please send an e-mail or 
 // make it as a github pull request
+//
 //***********************************************************//
+//
 // THIS WAS MADE WHILE LEARNING THE INTRODUCTION TO EMBEDDED
 // SYSTEMS COURSE AT FACULTY OF ENGINEERING, AIN SHAMS UNIVERSITY
+//
 //***********************************************************//
 
 #ifndef STDTIVA_H
@@ -18,7 +26,11 @@
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
 
+//***********************************************************//
+//
 // pins enum as their numbers defined in the datasheet of TM4C123GH6PM
+//
+//***********************************************************//
 typedef enum {
 	PA0 = 17,
 	PA1 = 18,
@@ -80,25 +92,33 @@ typedef enum { INPUT, OUTPUT } Direction;
 
 
 //***********************************************************//
+//
 // FUNCTIONS HANDLERS
+//
 //***********************************************************//
 //***********************************************************//
+//
 // PORT F FUNCTIONS
+//
 //***********************************************************//
-void PORTF_Init(void);
-uint32_t PORTF_Input(void);		// reads input from input pins in port F
-void PORTF_Output(uint32_t data);  // writes output to output pins in port F
+void PORTF_Init(void);			   			// initializes 
+uint32_t PORTF_Input(void);		   	  // reads input from input pins in port F
+void PORTF_Output(uint32_t data);   // writes output to output pins in port F
 
 //***********************************************************//
+//
 // SYSTICK FUNCTIONS
+//
 //***********************************************************//
-void SysTick_Init(void);								// must be called before using SysTick functions
+void SysTick_Init(void);					// must be called before using SysTick functions
 void SysTick_Wait(uint32_t delay);			// to wait a certain delay calculated by the system timer
 void SysTick_delay(uint32_t delayms);		// to wait a certain delay in ms
-void SysTick_delayus(uint32_t delayus); // to wait a certain delay in us
+void SysTick_delayus(uint32_t delayus);		// to wait a certain delay in us
 //***********************************************************//
+//
 // STANDARD FUNCTIONS
 // these are the main purpose of this file
+//
 //***********************************************************//
 void pinMode(Pin pin, Direction dir);
 void digitalEnable(Pin pin, PORT port);

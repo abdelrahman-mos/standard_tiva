@@ -1,3 +1,26 @@
+//***********************************************************//
+//
+// PORTF.c - standard initialization for tiva TM4C123GH6PM PORTF
+//
+//***********************************************************//
+//
+// this software standarizes some functions for TM4C123GH6PM 
+// tiva ware for the ease of use and learning
+//
+//***********************************************************//
+//
+// AUTHOR : Abderlahman Mostafa
+// E-mail : boboelahlawy1234@hotmail.com
+// for any questions and inquiries, please send an e-mail or 
+// make it as a github pull request
+//
+//***********************************************************//
+//
+// THIS WAS MADE WHILE LEARNING THE INTRODUCTION TO EMBEDDED
+// SYSTEMS COURSE AT FACULTY OF ENGINEERING, AIN SHAMS UNIVERSITY
+//
+//***********************************************************//
+
 #include "stdtiva.h"
 
 void PORTF_Init(void) {
