@@ -21,7 +21,7 @@
 //
 //***********************************************************//
 
-#include "D:\Study\Second Semster\Introduction to Embedded Systems\Projects\STDLIB\stdtiva.h"
+#include "stdtiva.h"
 
 void digitalEnable(Pin pin, PORT port) {
 	unsigned long mask = 0;
@@ -392,6 +392,216 @@ void pinMode(Pin pin, Direction dir) {
 
 void digitalWrite(Pin pin, Digital I_O) {
 	switch (pin) {
+		case PA0:
+			digitalEnable(PA0, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= 1;
+			else
+				GPIO_PORTA_DATA_R &= ~1;
+			break;
+		case PA1:
+			digitalEnable(PA1, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<1);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<1);
+			break;
+		case PA2:
+			digitalEnable(PA2, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<2);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<2);
+			break;
+		case PA3:
+			digitalEnable(PA3, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<3);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<3);
+			break;
+		case PA4:
+			digitalEnable(PA4, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<4);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<4);
+			break;
+		case PA5:
+			digitalEnable(PA5, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<5);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<5);
+			break;
+		case PA6:
+			digitalEnable(PA6, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<6);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<6);
+			break;
+		case PA7:
+			digitalEnable(PA7, PORTA);
+			if (I_O == HIGH)
+				GPIO_PORTA_DATA_R |= (1<<7);
+			else
+				GPIO_PORTA_DATA_R &= ~(1<<7);
+			break;
+		case PB0:
+			digitalEnable(PB0, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= 1;
+			else
+				GPIO_PORTB_DATA_R &= ~1;
+			break;
+		case PB1:
+			digitalEnable(PB1, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<1);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<1);
+			break;
+		case PB2:
+			digitalEnable(PB2, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<2);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<2);
+			break;
+		case PB3:
+			digitalEnable(PB3, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<3);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<3);
+			break;
+		case PB4:
+			digitalEnable(PB4, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<4);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<4);
+			break;
+		case PB5:
+			digitalEnable(PB5, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<5);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<5);
+			break;
+		case PB6:
+			digitalEnable(PB6, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<6);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<6);
+			break;
+		case PB7:
+			digitalEnable(PB7, PORTB);
+			if (I_O == HIGH)
+				GPIO_PORTB_DATA_R |= (1<<7);
+			else
+				GPIO_PORTB_DATA_R &= ~(1<<7);
+			break;
+		case PD0:
+			digitalEnable(PD0, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= 1;
+			else
+				GPIO_PORTD_DATA_R &= ~1;
+			break;
+		case PD1:
+			digitalEnable(PD1, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<1);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<1);
+			break;
+		case PD2:
+			digitalEnable(PD2, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<2);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<2);
+			break;
+		case PD3:
+			digitalEnable(PD3, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<3);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<3);
+			break;
+		case PD4:
+			digitalEnable(PD4, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<4);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<4);
+			break;
+		case PD5:
+			digitalEnable(PD5, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<5);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<5);
+			break;
+		case PD6:
+			digitalEnable(PD6, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<6);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<6);
+			break;
+		case PD7:
+			digitalEnable(PD7, PORTD);
+			if (I_O == HIGH)
+				GPIO_PORTD_DATA_R |= (1<<7);
+			else
+				GPIO_PORTD_DATA_R &= ~(1<<7);
+			break;
+		case PE0:
+			digitalEnable(PE0, PORTE);
+			if (I_O == HIGH)
+				GPIO_PORTE_DATA_R |= 1;
+			else
+				GPIO_PORTE_DATA_R &= ~1;
+			break;
+		case PE1:
+			digitalEnable(PE1, PORTE);
+			if (I_O == HIGH)
+				GPIO_PORTE_DATA_R |= (1<<1);
+			else
+				GPIO_PORTE_DATA_R &= ~(1<<1);
+			break;
+		case PE2:
+			digitalEnable(PE2, PORTE);
+			if (I_O == HIGH)
+				GPIO_PORTE_DATA_R |= (1<<2);
+			else
+				GPIO_PORTE_DATA_R &= ~(1<<2);
+			break;
+		case PE3:
+			digitalEnable(PE3, PORTE);
+			if (I_O == HIGH)
+				GPIO_PORTE_DATA_R |= (1<<3);
+			else
+				GPIO_PORTE_DATA_R &= ~(1<<3);
+			break;
+		case PE4:
+			digitalEnable(PE4, PORTE);
+			if (I_O == HIGH)
+				GPIO_PORTE_DATA_R |= (1<<4);
+			else
+				GPIO_PORTE_DATA_R &= ~(1<<4);
+			break;
+		case PE5:
+			digitalEnable(PE5, PORTE);
+			if (I_O == HIGH)
+				GPIO_PORTE_DATA_R |= (1<<5);
+			else
+				GPIO_PORTE_DATA_R &= ~(1<<5);
+			break;
 		case PF0:
 			digitalEnable(PF0, PORTF);
 			if (I_O == HIGH)
