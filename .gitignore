@@ -16,3 +16,4 @@ main.c
 *.bak
 *.future
 *.uvopt
+tok
