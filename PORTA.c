@@ -4,7 +4,7 @@ void PORTA_Init(void) {
 	SYSCTL_RCGCGPIO_R |= 0x00000001;
 	while ((SYSCTL_PRGPIO_R & 0x00000001)==0) {}
 	GPIO_PORTA_LOCK_R  = 0x4C4F434B; //unlock GPIO port F
-	GPIO_PORTA_CR_R    = 0x7F;			 //allow changes to port F
+	GPIO_PORTA_CR_R    = 0x1F;			 //allow changes to port F
 	GPIO_PORTA_AFSEL_R = 0x00;			 //disable alt function on PF7-0
 }
 
