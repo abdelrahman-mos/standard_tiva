@@ -266,3 +266,56 @@ void digitalWrite(Pin pin, Digital I_O) {
 			break;
 	}
 }
+
+uint32_t digitalRead(Pin pin) {
+	
+	uint32_t n = mask(pin);
+	
+	switch (pin) {
+		case PA0:
+		case PA1:
+		case PA2:
+		case PA3:
+		case PA4:
+		case PA5:
+		case PA6:
+		case PA7:
+			return (GPIO_PORTA_DATA_R>>n) & 0x01;
+			break;
+		case PB0:
+		case PB1:
+		case PB2:
+		case PB3:
+		case PB4:
+		case PB5:
+		case PB6:
+		case PB7:
+			return (GPIO_PORTB_DATA_R>>n) & 0x01;
+		break;
+		case PD0:
+		case PD1:
+		case PD2:
+		case PD3:
+		case PD4:
+		case PD5:
+		case PD6:
+		case PD7:
+			return (GPIO_PORTD_DATA_R>>n) & 0x01;
+		break;
+		case PE0:
+		case PE1:
+		case PE2:
+		case PE3:
+		case PE4:
+		case PE5:
+			return (GPIO_PORTE_DATA_R>>n) & 0x01;
+		break;
+		case PF0:
+		case PF1:
+		case PF2:
+		case PF3:
+		case PF4:
+			return (GPIO_PORTF_DATA_R>>n) & 0x01;
+		break;
+	}
+}
