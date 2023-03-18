@@ -154,5 +154,6 @@ void SysTick_delayus(uint32_t delayus);		// to wait a certain delay in us
 void pinMode(Pin pin, Direction dir);
 void digitalEnable(Pin pin, PORT port);
 void digitalWrite(Pin pin, Digital I_O);
+uint32_t digitalRead(Pin pin);
 
 #endif //STDTIVA_H
